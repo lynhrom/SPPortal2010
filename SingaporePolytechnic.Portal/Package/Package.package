@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="9bf733fd-20b1-4185-bc27-ba465c4a279c" solutionId="9bf733fd-20b1-4185-bc27-ba465c4a279c" resetWebServer="false" name="SingaporePolytechnic.Portal" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="SharepointCommon.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Dlls\SharepointCommon.dll" />
+    <customAssembly location="SingaporePolytechnic.Core.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Dlls\SingaporePolytechnic.Core.dll" />
+    <customAssembly location="SingaporePolytechnic.Infrastructure.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\Dlls\SingaporePolytechnic.Infrastructure.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="abe16aab-a28e-49ad-bd09-3f0265ef0509" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="49526c85-90da-4dd7-848e-dbd3b76f4190" />
+  </projectItems>
+</package>

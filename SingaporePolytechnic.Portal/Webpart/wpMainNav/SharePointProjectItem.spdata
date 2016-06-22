@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="wpMainNavUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="wpMainNav\" Type="ElementManifest" />
+    <ProjectItemFile Source="wpMainNav.webpart" Target="wpMainNav\" Type="ElementFile" />
+    <ProjectItemFile Source="wpMainNavUserControl.ascx" Target="CONTROLTEMPLATES\SingaporePolytechnic.Portal.Webpart\wpMainNav\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="SingaporePolytechnic.Portal.Webpart.wpMainNav" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

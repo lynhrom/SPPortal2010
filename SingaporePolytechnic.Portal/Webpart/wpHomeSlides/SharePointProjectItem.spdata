@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="wpHomeSlidesUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="wpHomeSlides\" Type="ElementManifest" />
+    <ProjectItemFile Source="wpHomeSlides.webpart" Target="wpHomeSlides\" Type="ElementFile" />
+    <ProjectItemFile Source="wpHomeSlidesUserControl.ascx" Target="CONTROLTEMPLATES\SingaporePolytechnic.Portal.Webpart\wpHomeSlides\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="SingaporePolytechnic.Portal.Webpart.wpHomeSlides" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

@@ -1,0 +1,471 @@
+﻿<%@Master language="C#"%>
+<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Assembly Name="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>
+<%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" src="~/_controltemplates/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="MUISelector" src="~/_controltemplates/MUISelector.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="DesignModeConsole" src="~/_controltemplates/DesignModeConsole.ascx" %>
+<%@ Register TagPrefix="WpNs0" Namespace="Microsoft.SharePoint.Portal.WebControls" Assembly="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@ Register Tagprefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+
+<%@ Register tagprefix="wpTopMenu" namespace="SingaporePolytechnic.Portal.Webpart.wpTopMenu" assembly="SingaporePolytechnic.Portal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d088ea04e6252bda" %>
+
+<%@ Register tagprefix="wpQuickLinks" namespace="SingaporePolytechnic.Portal.Webpart.wpQuickLinks" assembly="SingaporePolytechnic.Portal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d088ea04e6252bda" %>
+
+<%@ Register tagprefix="wpMainNav" namespace="SingaporePolytechnic.Portal.Webpart.wpMainNav" assembly="SingaporePolytechnic.Portal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d088ea04e6252bda" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="<%$Resources:wss,language_value%>" dir="<%$Resources:wss,multipages_direction_dir_value%>" runat="server" xmlns="http://www.w3.org/1999/xhtml" __expr-val-dir="ltr">
+<head runat="server">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta name="GENERATOR" content="Microsoft SharePoint" />
+	<meta name="progid" content="SharePoint.WebPartPage.Document" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="0" />
+	<SharePoint:RobotsMetaTag runat="server"/>
+	<title id="onetidTitle"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/>
+	</title>
+	<SharePoint:CssLink runat="server" Version="4"/>
+	<SharePoint:Theme runat="server"/>
+	<SharePoint:ULSClientConfig runat="server"/>
+	<script type="text/javascript">
+		var _fV4UI = true;
+	</script>
+	<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server"/>
+	<SharePoint:CustomJSUrl runat="server"/>
+	<SharePoint:SoapDiscoveryLink runat="server"/>
+	<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"></asp:ContentPlaceHolder>
+	<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true"/>
+	<SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/SP.edu.sg/css/Portal.ico"/>
+	<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat="server" />
+	<SharePoint:SPPageManager runat="server"/>
+	<SharePoint:SPHelpPageComponent Visible="false" runat="server"/>
+
+	<script type='text/javascript' src='/_layouts/SP.edu.sg/plugins/semanticTag/semanticTagService.js?language=en'></script>
+	<link id="portalStyles" href='/_layouts/SP.edu.sg/css/style.css' rel="styleSheet" type="text/css" />
+	<script type="text/javascript" src='/_layouts/SP.edu.sg/js/sptheme_spwsMainV2.js'></script>
+	<script type="text/javascript" src='/_layouts/SP.edu.sg/js/js_prn.js'></script>
+	<script type="text/javascript" src="/_layouts/SP.edu.sg/js/menu_service.js"></script>
+	<script type="text/javascript" >var menuService_AppletCodebase ="js";</script>
+	<script type="text/javascript" src='/_layouts/SP.edu.sg/js/context_ns6.js'></script>
+	<script type="text/javascript">  
+		function showMainMenu_Z6_UH5E2F540OTJ50IOSE9BEP28M1()
+		{
+			asynchContextMenuOnMouseClickHandler( "menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1_main", true, '/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQz8Q7xMDTz9g10tnVwDjCx8DYEKIoEKDHAARwNC-sP1o8BKnN0dPUzMfQwMLAKMzAw8w4yczR2DQwwNPM2gCvBYUZAbYZDpqKgIAETU5OI!/dl5/d5/L0lDU1EvUU5RSy80SFNFL21haW5NZW51/', "main-menu-border", "main-menu", "main-menu-item", "main-menu-item-selected", null,'/themes/spwsMainV2/images/banner/launch_loading.gif' );
+		}
+		
+		var pageMenuURL = '/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQz8Q7xMDTz9g10tnVwDjCx8DYEKIoEKDHAARwNC-sP1o8BKnN0dPUzMfQwMLAKMzAw8w4yczR2DQwwNPM2gCvBYUZAbYZDpqKgIAETU5OI!/dl5/d5/L0lDU1EvUU5RSy80SFNFL3BhZ2VDb250ZXh0TWVudQ!!/';
+		
+		function showPageMenu( launcher )
+		{	
+			asynchContextMenuOnMouseClickHandler( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1',true,pageMenuURL, "main-menu-border", "main-menu", "main-menu-item", "main-menu-item-selected", 'No actions currently available.','/themes/spwsMainV2/images/context_loading.gif' );
+		}
+		
+		function accessibleShowPageMenu( evt )
+		{
+			keyCode = -1;
+			if ( evt && evt.which )
+			{	
+				keyCode = evt.which;
+			}
+			else if ( window.event )
+			{
+				keyCode = window.event.keyCode
+			}	
+		
+			if ( keyCode == 13 )
+			{
+		    	
+				
+				asynchContextMenuOnMouseClickHandler( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1',true,pageMenuURL, "main-menu-border", "main-menu", "main-menu-item", "main-menu-item-selected", 'No actions currently available.','/themes/spwsMainV2/images/context_loading.gif' );
+			}
+			else
+			{
+			 	return true;
+			}
+		}
+		
+		function showPageAffordance()
+		{
+			if ( asynchContextMenu_menuCurrentlyLoading != null )
+				return;	
+		
+			
+				if (document.getElementById( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1' ) != null)
+			    {
+					document.getElementById( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1' ).style.cursor = 'pointer';
+					document.getElementById( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1_img' ).src="/themes/spwsMainV2/images/topNav/menu_selected.gif";
+				}
+			
+		}
+		
+		function hidePageAffordance()
+		{
+			if ( asynchContextMenu_menuCurrentlyLoading != null )
+				return;
+			
+			    if (document.getElementById( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1' ) != null)
+			    {
+					document.getElementById( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1' ).style.cursor = 'default';
+					document.getElementById( 'menu_Z6_UH5E2F540OTJ50IOSE9BEP28M1_img' ).src="/themes/spwsMainV2/images/topNav/menu_selected_disabled.gif";
+				}
+			
+		}
+		
+		function GetQueryString_ByName(name)
+		{
+			var URL = document.URL;
+			var querystring = '';
+			querystring = URL.substring(URL.indexOf('?') + 1);
+			var arrqs = querystring.split('&');
+			
+			for (var i = 0; i<arrqs.length; i++)
+			{
+				qsname = arrqs[i].substring(0, arrqs[i].indexOf('='));
+				qsvalue = arrqs[i].substring(arrqs[i].indexOf('=') + 1);
+				if (qsname == name) 
+				{
+					return qsvalue
+				};
+			}
+			return '';
+		}
+		
+		function showLayer(index, total)
+		{
+			var divname = 'div';
+			for (var i=1;i<=total;i++)
+			{
+				div= document.getElementById(divname + i.toString());
+				
+				if (i == index)
+				{
+					div.style.display='block';
+				}
+				else
+				{
+					div.style.display='none';
+				}
+			}
+		}
+		
+		function initLayout()
+		{
+			var selectedtab = GetQueryString_ByName('tab');
+			if(selectedtab==''){
+			selectedtab='education';
+			}
+			var tabname;
+			if (selectedtab != '')
+			{
+				var divname = 'div';
+				for (var i=1;i<=3;i++)
+				{
+					div= document.getElementById(divname + i.toString());
+					if (i == 1)
+					{
+						tabname = 'webinar'
+					}
+					else if (i == 2)
+					{
+						tabname = 'seminar';   
+					}
+					else if (i == 3)
+					{
+						tabname = 'education';
+					}
+					if (selectedtab == tabname)
+					{
+						div.style.display='block';
+					}
+					else
+					{
+						div.style.display='none';
+					}
+				}
+			}
+		}
+		
+		function switchStyle(oSpan)  
+		{       
+			if(oSpan.className =='nav3b')
+			{
+				oSpan.className ='nav3a';
+			}
+			else
+			{
+				oSpan.className ='nav3b';
+			}
+			
+		}
+		  
+	</script>
+	<style>
+.s4-ca {
+	margin-left: 0;
+}
+</style>
+</head>
+<body scroll="no" onload="if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();" class="v4master" id="psic">
+
+	<form runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+		<input id="RibbonContainer_activeTabId" name="ctl00$ctl20" type="hidden" value="" />
+		<asp:ScriptManager id="ScriptManager" runat="server" enablepagemethods="false" enablepartialrendering="true" enablescriptglobalization="false" enablescriptlocalization="true" />
+		<WebPartPages:SPWebPartManager id="m" runat="Server"/>
+		<SharePoint:SPNoScript runat="server"/>
+		<div id="TurnOnAccessibility" style="display: none" class="s4-notdlg noindex">
+			<a id="linkTurnOnAcc" href="#" class="ms-TurnOnAcc" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+				<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnonaccessibility%>" EncodeMethod="HtmlEncode"/>
+			</a>
+		</div>
+		<div id="TurnOffAccessibility" style="display: none" class="s4-notdlg noindex">
+			<a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+				<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnoffaccessibility%>" EncodeMethod="HtmlEncode"/>
+			</a>
+		</div>
+		<div class="s4-notdlg s4-skipribbonshortcut noindex">
+			<a href="javascript:;" onclick="javascript:this.href='#startNavigation';" class="ms-SkiptoNavigation" accesskey="<%$Resources:wss,skipribbon_accesskey%>" runat="server">
+				<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,skipRibbonCommandsLink%>" EncodeMethod="HtmlEncode"/>
+			</a>
+		</div>
+		<div class="s4-notdlg noindex">
+			<a href="javascript:;" onclick="javascript:this.href='#mainContent';" class="ms-SkiptoMainContent" accesskey="<%$Resources:wss,maincontent_accesskey%>" runat="server">
+				<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,mainContentLink%>" EncodeMethod="HtmlEncode"/>
+			</a>
+		</div>
+		<a id="HiddenAnchor" href="javascript:;" style="display: none;"></a>
+		<SharePoint:SPSecurityTrimmedControl PermissionsString="EditListItems" runat="server">
+			<SharePoint:DelegateControl runat="server" ControlId="GlobalNavigation" />
+				<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
+					<div id="s4-ribboncont">
+						<SharePoint:SPRibbon runat="server" PlaceholderElementId="RibbonContainer" CssFile="">
+						<SharePoint:SPRibbonPeripheralContent runat="server" Location="TabRowLeft" CssClass="ms-siteactionscontainer s4-notdlg">
+						<span class="ms-siteactionsmenu" id="siteactiontd">
+						<SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain" PrefixHtml="" SuffixHtml="" MenuNotVisibleHtml="&amp;nbsp;">
+							<CustomTemplate>
+								<SharePoint:FeatureMenuTemplate runat="server" FeatureScope="Site" Location="Microsoft.SharePoint.StandardMenu" GroupId="SiteActions" UseShortId="true">
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditPage" Text="<%$Resources:wss,siteactions_editpage%>" Description="<%$Resources:wss,siteactions_editpagedescriptionv4%>" ImageUrl="/_layouts/images/ActionsEditPage.png" MenuGroupId="100" Sequence="110" ClientOnClickNavigateUrl="javascript:ChangeLayoutMode(false);" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_TakeOffline" Text="<%$Resources:wss,siteactions_takeoffline%>" Description="<%$Resources:wss,siteactions_takeofflinedescription%>" ImageUrl="/_layouts/images/connecttospworkspace32.png" MenuGroupId="100" Sequence="120" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreatePage" Text="<%$Resources:wss,siteactions_createpage%>" Description="<%$Resources:wss,siteactions_createpagedesc%>" ImageUrl="/_layouts/images/NewContentPageHH.png" MenuGroupId="200" Sequence="210" UseShortId="true" ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('Page')) { OpenCreateWebPageDialog('~site/_layouts/createwebpage.aspx') }" PermissionsString="AddListItems, EditListItems" PermissionMode="All" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreateDocLib" Text="<%$Resources:wss,siteactions_createdoclib%>" Description="<%$Resources:wss,siteactions_createdoclibdesc%>" ImageUrl="/_layouts/images/NewDocLibHH.png" MenuGroupId="200" Sequence="220" UseShortId="true" ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('DocLib')) { GoToPage('~site/_layouts/new.aspx?FeatureId={00bfea71-e717-4e80-aa17-d0c71b360101}&amp;ListTemplate=101') }" PermissionsString="ManageLists" PermissionMode="Any" VisibilityFeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreateSite" Text="<%$Resources:wss,siteactions_createsite%>" Description="<%$Resources:wss,siteactions_createsitedesc%>" ImageUrl="/_layouts/images/newweb32.png" MenuGroupId="200" Sequence="230" UseShortId="true" ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('Site')) { STSNavigate('~site/_layouts/newsbweb.aspx') }" PermissionsString="ManageSubwebs,ViewFormPages" PermissionMode="All" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_Create" Text="<%$Resources:wss,siteactions_create%>" Description="<%$Resources:wss,siteactions_createdesc%>" MenuGroupId="200" Sequence="240" UseShortId="true" ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('All')) { STSNavigate('~site/_layouts/create.aspx') }" PermissionsString="ManageLists, ManageSubwebs" PermissionMode="Any" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_ViewAllSiteContents" Text="<%$Resources:wss,quiklnch_allcontent%>" Description="<%$Resources:wss,siteactions_allcontentdescription%>" ImageUrl="/_layouts/images/allcontent32.png" MenuGroupId="300" Sequence="302" UseShortId="true" ClientOnClickNavigateUrl="~site/_layouts/viewlsts.aspx" PermissionsString="ViewFormPages" PermissionMode="Any" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditSite" Text="<%$Resources:wss,siteactions_editsite%>" Description="<%$Resources:wss,siteactions_editsitedescription%>" ImageUrl="/_layouts/images/SharePointDesigner32.png" MenuGroupId="300" Sequence="304" UseShortId="true" ClientOnClickScriptContainingPrefixedUrl="EditInSPD('~site/',true);" PermissionsString="AddAndCustomizePages" PermissionMode="Any" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_SitePermissions" Text="<%$Resources:wss,people_sitepermissions%>" Description="<%$Resources:wss,siteactions_sitepermissiondescriptionv4%>" ImageUrl="/_layouts/images/Permissions32.png" MenuGroupId="300" Sequence="310" UseShortId="true" ClientOnClickNavigateUrl="~site/_layouts/user.aspx" PermissionsString="EnumeratePermissions" PermissionMode="Any" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_Settings" Text="<%$Resources:wss,settings_pagetitle%>" Description="<%$Resources:wss,siteactions_sitesettingsdescriptionv4%>" ImageUrl="/_layouts/images/settingsIcon.png" MenuGroupId="300" Sequence="320" UseShortId="true" ClientOnClickNavigateUrl="~site/_layouts/settings.aspx" PermissionsString="EnumeratePermissions,ManageWeb,ManageSubwebs,AddAndCustomizePages,ApplyThemeAndBorder,ManageAlerts,ManageLists,ViewUsageData" PermissionMode="Any" />
+									<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CommitNewUI" Text="<%$Resources:wss,siteactions_commitnewui%>" Description="<%$Resources:wss,siteactions_commitnewuidescription%>" ImageUrl="/_layouts/images/visualupgradehh.png" MenuGroupId="300" Sequence="330" UseShortId="true" ClientOnClickScriptContainingPrefixedUrl="GoToPage('~site/_layouts/prjsetng.aspx')" PermissionsString="ManageWeb" PermissionMode="Any" ShowOnlyIfUIVersionConfigurationEnabled="true" />
+								</SharePoint:FeatureMenuTemplate>
+							</CustomTemplate>
+						</SharePoint:SiteActions>
+						</span>
+						<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" runat="server">
+							<SharePoint:PopoutMenu runat="server" ID="GlobalBreadCrumbNavPopout" IconUrl="/_layouts/images/fgimg.png" IconAlt="<%$Resources:wss,master_breadcrumbIconAlt%>" IconOffsetX="0" IconOffsetY="112" IconWidth="16" IconHeight="16" AnchorCss="s4-breadcrumb-anchor" AnchorOpenCss="s4-breadcrumb-anchor-open" MenuCss="s4-breadcrumb-menu">
+							<div class="s4-breadcrumb-top">
+								<asp:Label runat="server" CssClass="s4-breadcrumb-header" Text="<%$Resources:wss,master_breadcrumbHeader%>" />
+							</div>
+							<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server">
+								<SharePoint:ListSiteMapPath runat="server" SiteMapProviders="SPSiteMapProvider,SPContentMapProvider" RenderCurrentNodeAsLink="false" PathSeparator="" CssClass="s4-breadcrumb" NodeStyle-CssClass="s4-breadcrumbNode" CurrentNodeStyle-CssClass="s4-breadcrumbCurrentNode" RootNodeStyle-CssClass="s4-breadcrumbRootNode" NodeImageOffsetX="0" NodeImageOffsetY="353" NodeImageWidth="16" NodeImageHeight="16" NodeImageUrl="/_layouts/images/fgimg.png" RTLNodeImageOffsetX="0" RTLNodeImageOffsetY="376" RTLNodeImageWidth="16" RTLNodeImageHeight="16" RTLNodeImageUrl="/_layouts/images/fgimg.png" HideInteriorRootNodes="true" SkipLinkText="" />
+							</asp:ContentPlaceHolder>
+							</SharePoint:PopoutMenu>
+							<div class="s4-die">
+								<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" runat="server" Visible="false">
+								</asp:ContentPlaceHolder>
+							</div>
+						</asp:ContentPlaceHolder>
+						<SharePoint:PageStateActionButton id="PageStateActionButton" runat="server" Visible="false" />
+						</SharePoint:SPRibbonPeripheralContent>
+						<SharePoint:SPRibbonPeripheralContent runat="server" Location="TabRowRight" ID="RibbonTabRowRight" CssClass="s4-trc-container s4-notdlg">
+						<SharePoint:DelegateControl runat="server" ID="GlobalDelegate0" ControlId="GlobalSiteLink0" />
+						<a href="#" tabindex="-1" style="display:none"></a>
+						<a href="#" tabindex="-1" style="display:none"></a>
+						
+						<div class="s4-trc-container-menu">
+							<wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false">
+							</wssuc:Welcome>
+							<wssuc:MUISelector runat="server"/>
+						</div>
+			
+						<SharePoint:DelegateControl ControlId="GlobalSiteLink2" ID="GlobalDelegate2" Scope="Farm" runat="server" />
+						<span><span class="s4-devdashboard">
+						<SharePoint:DeveloperDashboardLauncher ID="DeveloperDashboardLauncher" NavigateUrl="javascript:ToggleDeveloperDashboard()" runat="server" ImageUrl="/_layouts/images/fgimg.png" Text="<%$Resources:wss,multipages_launchdevdashalt_text%>" OffsetX="0" OffsetY="222" Height="16" Width="16" />
+						</span></span></SharePoint:SPRibbonPeripheralContent>
+						</SharePoint:SPRibbon>
+					</div>
+					<div id="notificationArea" class="s4-noti">
+					</div>
+					<asp:ContentPlaceHolder ID="SPNavigation" runat="server">
+						<SharePoint:DelegateControl runat="server" ControlId="PublishingConsole" Id="PublishingConsoleDelegate">
+						</SharePoint:DelegateControl>
+					</asp:ContentPlaceHolder>
+					<div id="WebPartAdderUpdatePanelContainer">
+						<asp:UpdatePanel ID="WebPartAdderUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="false" runat="server">
+							<ContentTemplate>
+								<WebPartPages:WebPartAdder ID="WebPartAdder" runat="server" />
+							</ContentTemplate>
+							<Triggers>
+								<asp:postbacktrigger ControlID="WebPartAdder" />
+							</Triggers>
+						</asp:UpdatePanel>
+					</div>
+				</div>
+		</SharePoint:SPSecurityTrimmedControl>
+<div id="s4-workspace">
+	<div class="s4-ca main-container" id="MSO_ContentDiv" runat="server">
+	
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5D6H2P"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'\?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-5D6H2P');
+		</script>
+		<!-- End Google Tag Manager -->
+		<div style="width: 100%; position: relative; border:0px">
+			<!--Message show Div Overlay Start-->
+			<div class="spws">
+				<div class="spws_container">
+					<div class="spws_header clearfix">
+						<div class="spws_stakeholder clearfix">
+							
+							<wpTopMenu:wpTopMenu runat="server" Description="My Visual WebPart" Title="wpTopMenu" __MarkupType="vsattributemarkup" __WebPartId="{850efc4a-f5e6-44ee-9b27-3e2f39347d3e}" WebPart="true" __designer:IsClosed="false" id="g_850efc4a_f5e6_44ee_9b27_3e2f39347d3e"></wpTopMenu:wpTopMenu>
+							
+						</div>
+						<!--11-->
+						<div class="spws_logo-wrapper clearfix">
+							<div class="left">
+								<a href="/wps/portal/vp-spws" class="spws_logo">
+									<p>Singapore Polytechnic</p>
+								</a>
+							</div>
+							<div class="spws_quicklinks-and-search right">
+								<ul class="right">
+									<li class="spws_search">
+										<div id="es_search_form" action="/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQz8Q7xMDTz9g10tnVwDjCx8DYEKIoEKDHAARwNC-sP1o8BKnN0dPUzMfQwMLAKMzAw8w4yczR2DQwwNPM2gCvBYUZAbYZDpqKgIAETU5OI!/dl5/d5/L2dJQSEvUUt3QS80SmlFL1o2X1VINUUyRjU0MDA4OUYwSTQwR1VCTUQwT081/?cID=Z6_UH5E2F540OTJ50IOSE9BEP28M1&nID=Z6_UH5E2F540OTJ50IOSE9BEP28M1">
+											<input id="Search" type="text" name="q" value="Search" onfocus="if (this.value=='Search'){this.value='';};return false;" onblur="if (this.value==''){this.value='Search';return false;}" /> <input type="submit" value="" onclick="parentNode.submit()" />
+										</div>
+									</li>
+								</ul>
+								<div class="spws_nav spws_org clearfix">
+									
+									<wpQuickLinks:wpQuickLinks runat="server" Description="My Visual WebPart" Title="wpQuickLinks" __MarkupType="vsattributemarkup" __WebPartId="{8d96ad36-3b79-4804-8bf1-0374be21966f}" WebPart="true" __designer:IsClosed="false" id="g_8d96ad36_3b79_4804_8bf1_0374be21966f"></wpQuickLinks:wpQuickLinks>
+									
+								</div>
+							</div>
+							<div class='clearfix'></div>
+						</div>
+							
+						<wpMainNav:wpMainNav runat="server" Description="My Visual WebPart" Title="wpMainNav" __MarkupType="vsattributemarkup" __WebPartId="{cdceef49-4a5b-4164-b1c3-33b8d6929678}" WebPart="true" __designer:IsClosed="false" id="g_cdceef49_4a5b_4164_b1c3_33b8d6929678"></wpMainNav:wpMainNav>
+							
+					</div>
+					
+					<!-- Slider -->
+					<asp:ContentPlaceHolder ID="PlaceHolderHomeSlider" runat="server" />
+				</div>
+				
+				<asp:ContentPlaceHolder ID="PlaceHolderHomeBox" runat="server" />
+				<div class="spws_container">
+				
+					<div id="spws_main" class="spws_main clearfix">
+						
+						<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"/>
+						
+					</div>
+					<div class="spws_footer clearfix">
+						<div class="left">
+							<ul class="spws_address clearfix">
+								<li class="spws_bold">Singapore Polytechnic
+								</li>
+								<li>500 Dover Road Singapore 139651
+								</li>
+								<li>The Singapore Public Service: Integrity, Service, Excellence
+								</li>
+							</ul>
+						</div>
+						<div class="right">
+							<ul class="spws_nav clearfix">
+								<li><a href="/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQwMDMIMDTz9XQNcAwwtDX0DTPULsh0VAXJcGAM!/?WCM_GLOBAL_CONTEXT=">Privacy Statement</a></li>
+								<li><a href="/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQwMDMIMDTz9XQNcAwwtDX1NjfQLsh0VAYgPk8c!/?WCM_GLOBAL_CONTEXT=">Terms of Use</a></li>
+								<li><a href="/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQwMDMIMDTz9XQNcAwwtDX1NzfULsh0VATueXpc!/?WCM_GLOBAL_CONTEXT=">Sitemap</a></li>
+							</ul>
+							<div class="text-right">
+								<a href="https://publicapps.sp.edu.sg/corporate/ePoll.nsf/frmePollSurvey?openForm&serviceIdePollId=S00016^~^eP00032" target="_blank">Rate this website</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script language="JavaScript" type="text/javascript">
+				urlmapping="spws.fsu"
+			</script>
+		</div>
+		
+	</div>
+</div>
+<div id="s4-bodyContainer">
+	<asp:Panel Visible="false" runat="server">
+		<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderWikiNavigator" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderSiteName" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" />
+		<asp:ContentPlaceHolder ID="OSSConsole" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTitleRightMargin" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderLeftNavBorder" runat="server" />
+		<asp:ContentPlaceHolder id="WSSDesignConsole" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server" />
+		<asp:ContentPlaceHolder ID="PlaceHolderHorizontalNav" runat="server" />
+		
+	</asp:Panel>
+</div>
+<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+		<SharePoint:FormDigest runat="server"/>
+	</asp:ContentPlaceHolder>
+	</form>
+	<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server">
+	</asp:ContentPlaceHolder>
+	
+	<!-- Dojo Plugin -->
+	<script type="text/javascript">
+		var djConfig = {
+			"baseUrl":"/_layouts/sp.edu.sg/plugins/dojo/",
+			"locale":"en",
+			"isDebug":false,
+			"debugAtAllCosts":false,
+			"parseOnLoad":false,
+			"afterOnLoad":false,
+			"modulePaths":{"com":"/wps/themeModules/js/com","ibm":"/wps/themeModules/js/ibm","custom":"custom"}
+		};
+		djConfig.locale=djConfig.locale.replace(/_/g, "-").replace(/iw/, "he").toLowerCase();
+	</script>
+	<script type="text/javascript" src="/_layouts/SP.edu.sg/plugins/dojo/dojo.js" data-dojo-config="parseOnLoad: true, useXDomain: true"></script>
+	<script type="text/javascript" src="/_layouts/SP.edu.sg/js/alldependencies.js"></script>
+	<script type="text/javascript" src="/_layouts/SP.edu.sg/js/alldependencies_2.js"></script>
+	<script>
+		require(["custom/AutoRotator", "dojox/widget/AutoRotator", "dojox/widget/rotator/Fade"]);
+		require(["custom/SPWS"], function (spwsModule) { 
+		  // 20150612 - VT (New design tweak doesn't required white border): spwsModule.processLayout("spws_main"); 
+		  spwsModule.processMegaMenu("spws_nav", 1500); 
+		  spwsModule.processBanner("spws_main_rotator"); 
+		});     
+		dojo.parser.parse(); 
+	</script>
+</body>
+</html>

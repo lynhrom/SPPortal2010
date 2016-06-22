@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11FD396E-C12E-4D20-BF89-70B1ECD619CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SingaporePolytechnic.Portal</RootNamespace>
+    <AssemblyName>SingaporePolytechnic.Portal</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharepointCommon">
+      <HintPath>..\Dlls\SharepointCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\NavigationApp.cs" />
+    <Compile Include="App\SPPortalApp.cs" />
+    <Compile Include="Entity\NavigationEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Webpart\BaseSPPortalUC.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpConnectwithSP\wpConnectwithSP.cs" />
+    <Compile Include="Webpart\wpConnectwithSP\wpConnectwithSPUserControl.ascx.cs">
+      <DependentUpon>wpConnectwithSPUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpConnectwithSP\wpConnectwithSPUserControl.ascx.designer.cs">
+      <DependentUpon>wpConnectwithSPUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpHomeSlides\wpHomeSlides.cs" />
+    <Compile Include="Webpart\wpHomeSlides\wpHomeSlidesUserControl.ascx.cs">
+      <DependentUpon>wpHomeSlidesUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpHomeSlides\wpHomeSlidesUserControl.ascx.designer.cs">
+      <DependentUpon>wpHomeSlidesUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpMainNav\wpMainNav.cs" />
+    <Compile Include="Webpart\wpMainNav\wpMainNavUserControl.ascx.cs">
+      <DependentUpon>wpMainNavUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpMainNav\wpMainNavUserControl.ascx.designer.cs">
+      <DependentUpon>wpMainNavUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpMaskhead\wpMaskhead.cs" />
+    <Compile Include="Webpart\wpMaskhead\wpMaskheadUserControl.ascx.cs">
+      <DependentUpon>wpMaskheadUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpMaskhead\wpMaskheadUserControl.ascx.designer.cs">
+      <DependentUpon>wpMaskheadUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpPortlet\wpPortlet.cs" />
+    <Compile Include="Webpart\wpPortlet\wpPortletUserControl.ascx.cs">
+      <DependentUpon>wpPortletUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpPortlet\wpPortletUserControl.ascx.designer.cs">
+      <DependentUpon>wpPortletUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpQuickLinks\wpQuickLinks.cs" />
+    <Compile Include="Webpart\wpQuickLinks\wpQuickLinksUserControl.ascx.cs">
+      <DependentUpon>wpQuickLinksUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpQuickLinks\wpQuickLinksUserControl.ascx.designer.cs">
+      <DependentUpon>wpQuickLinksUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpSiteMap\wpSiteMap.cs" />
+    <Compile Include="Webpart\wpSiteMap\wpSiteMapUserControl.ascx.cs">
+      <DependentUpon>wpSiteMapUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpSiteMap\wpSiteMapUserControl.ascx.designer.cs">
+      <DependentUpon>wpSiteMapUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpSocialMedia\wpSocialMedia.cs" />
+    <Compile Include="Webpart\wpSocialMedia\wpSocialMediaUserControl.ascx.cs">
+      <DependentUpon>wpSocialMediaUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpSocialMedia\wpSocialMediaUserControl.ascx.designer.cs">
+      <DependentUpon>wpSocialMediaUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpSPBuzz\wpSPBuzz.cs" />
+    <Compile Include="Webpart\wpSPBuzz\wpSPBuzzUserControl.ascx.cs">
+      <DependentUpon>wpSPBuzzUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpSPBuzz\wpSPBuzzUserControl.ascx.designer.cs">
+      <DependentUpon>wpSPBuzzUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpSPIRITMagazine\wpSPIRITMagazine.cs" />
+    <Compile Include="Webpart\wpSPIRITMagazine\wpSPIRITMagazineUserControl.ascx.cs">
+      <DependentUpon>wpSPIRITMagazineUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpSPIRITMagazine\wpSPIRITMagazineUserControl.ascx.designer.cs">
+      <DependentUpon>wpSPIRITMagazineUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpStudentServiceCentre\wpStudentServiceCentre.cs" />
+    <Compile Include="Webpart\wpStudentServiceCentre\wpStudentServiceCentreUserControl.ascx.cs">
+      <DependentUpon>wpStudentServiceCentreUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpStudentServiceCentre\wpStudentServiceCentreUserControl.ascx.designer.cs">
+      <DependentUpon>wpStudentServiceCentreUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpTopMenu\wpTopMenu.cs" />
+    <Compile Include="Webpart\wpTopMenu\wpTopMenuUserControl.ascx.cs">
+      <DependentUpon>wpTopMenuUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpTopMenu\wpTopMenuUserControl.ascx.designer.cs">
+      <DependentUpon>wpTopMenuUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpUpcomingEvents\wpUpcomingEvents.cs" />
+    <Compile Include="Webpart\wpUpcomingEvents\wpUpcomingEventsUserControl.ascx.cs">
+      <DependentUpon>wpUpcomingEventsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpUpcomingEvents\wpUpcomingEventsUserControl.ascx.designer.cs">
+      <DependentUpon>wpUpcomingEventsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webpart\wpVideoGallery\wpVideoGallery.cs" />
+    <Compile Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx.cs">
+      <DependentUpon>wpVideoGalleryUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx.designer.cs">
+      <DependentUpon>wpVideoGalleryUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{abe16aab-a28e-49ad-bd09-3f0265ef0509}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{49526c85-90da-4dd7-848e-dbd3b76f4190}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\SP.edu.sg\SPPortal.master" />
+    <None Include="ListTemplates\GallerySlider.stp" />
+    <None Include="ListTemplates\Navigation.stp" />
+    <None Include="Package\Package.package">
+      <PackageId>{9bf733fd-20b1-4185-bc27-ba465c4a279c}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Webpart\wpConnectwithSP\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8bdcfeb4-08f9-47ac-a949-1a00a7ecba82}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpConnectwithSP\wpConnectwithSP.webpart" />
+    <None Include="Webpart\wpHomeSlides\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{911cec1d-75f6-4c80-ac78-299593e7eae5}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpHomeSlides\wpHomeSlides.webpart" />
+    <None Include="Webpart\wpMainNav\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d3160b47-0ac5-4f2a-919e-bc6c58c20824}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpMainNav\wpMainNav.webpart" />
+    <None Include="Webpart\wpMaskhead\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7fe528e1-2637-4748-801e-a7ea1e2c55c1}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpMaskhead\wpMaskhead.webpart" />
+    <None Include="Webpart\wpPortlet\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d0b85132-6423-45b3-9050-96e7ea443d99}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpPortlet\wpPortlet.webpart" />
+    <None Include="Webpart\wpQuickLinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6f611c60-7fa6-4d25-bc79-c890e9c14c45}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpQuickLinks\wpQuickLinks.webpart" />
+    <None Include="Webpart\wpSiteMap\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c0628887-9274-4025-a1c5-7d5a6338a717}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpSiteMap\wpSiteMap.webpart" />
+    <None Include="Webpart\wpSocialMedia\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c49ebafe-3297-429f-923b-07edbc44bbb6}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpSocialMedia\wpSocialMedia.webpart" />
+    <None Include="Webpart\wpSPBuzz\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3d4179b1-ac96-4ca1-a3c4-b20c21352f22}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpSPBuzz\wpSPBuzz.webpart" />
+    <None Include="Webpart\wpSPIRITMagazine\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f17e4558-4a3e-43f8-a4cc-05d14521e025}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpSPIRITMagazine\wpSPIRITMagazine.webpart" />
+    <None Include="Webpart\wpStudentServiceCentre\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a54cb96c-8244-4bc7-a368-8b91b83611e4}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpStudentServiceCentre\wpStudentServiceCentre.webpart" />
+    <None Include="Webpart\wpTopMenu\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2b3746c9-50b7-4a6b-9ea2-3d4bc289a94b}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpTopMenu\wpTopMenu.webpart" />
+    <None Include="Webpart\wpUpcomingEvents\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{adeec895-0843-4268-a3e0-049b6d818797}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpUpcomingEvents\wpUpcomingEvents.webpart" />
+    <None Include="Webpart\wpVideoGallery\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f80c3ac1-b179-49ed-a8dc-a4e7c2175e2d}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpVideoGallery\wpVideoGallery.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SingaporePolytechnic.Core\SingaporePolytechnic.Core.csproj">
+      <Project>{A4F624C3-B5F9-4A92-B238-174C34D8DA9C}</Project>
+      <Name>SingaporePolytechnic.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SingaporePolytechnic.Infrastructure\SingaporePolytechnic.Infrastructure.csproj">
+      <Project>{1A3153F2-7123-4ACB-BD04-5B7A41F8D84D}</Project>
+      <Name>SingaporePolytechnic.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\SP.edu.sg\css\Portal.ico" />
+    <Content Include="Layouts\SP.edu.sg\css\style.css" />
+    <Content Include="Layouts\SP.edu.sg\feed\spbuzzfeedxml\feed.xml" />
+    <Content Include="Layouts\SP.edu.sg\feed\SPSocialMediaFeed\Facebook.js" />
+    <Content Include="Layouts\SP.edu.sg\feed\SPSocialMediaFeed\Instagram.js" />
+    <Content Include="Layouts\SP.edu.sg\feed\SPTwitterFeed\SPTwitterServlet.js" />
+    <Content Include="Layouts\SP.edu.sg\images\arrow-up-dark.png" />
+    <Content Include="Layouts\SP.edu.sg\images\arrow-up.png" />
+    <Content Include="Layouts\SP.edu.sg\images\awesome.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\banner_gogreen.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\banner_goserve.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\banner_link_arrow.png" />
+    <Content Include="Layouts\SP.edu.sg\images\banner_skillsfuture.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\banner_ssc.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\beinspired.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\border-bottom.gif" />
+    <Content Include="Layouts\SP.edu.sg\images\icon-arrow-maskhead-left.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icon-arrow-maskhead-right.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icon-search.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\icon-eventcalendar.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\icon-facebook.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\icon-spmobile.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\icon-twitter.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\icon-youtube.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\icon_instagram.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\linkedin.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\spmemories.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\spmobileapps3.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icons\spxperience.png" />
+    <Content Include="Layouts\SP.edu.sg\images\icon_print.png" />
+    <Content Include="Layouts\SP.edu.sg\images\line-sp.gif" />
+    <Content Include="Layouts\SP.edu.sg\images\logo-sp.png" />
+    <Content Include="Layouts\SP.edu.sg\images\next_sm_arrow.png" />
+    <Content Include="Layouts\SP.edu.sg\images\prev_sm_arrow.png" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\1000x349_students_1.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\1000x349_students_2.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\banner_surepasskit.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\campus-life2.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\EAE-2016.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\folkestone2016.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\slider\pforum2016-June-full.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\social_media_icons.png" />
+    <Content Include="Layouts\SP.edu.sg\images\SPELL_Team-310x175.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\spirit.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\stakeholder_nav_arrow.jpg" />
+    <Content Include="Layouts\SP.edu.sg\images\successfulgraduates2.jpg" />
+    <Content Include="Layouts\SP.edu.sg\index.html" />
+    <Content Include="Layouts\SP.edu.sg\js\alldependencies.js" />
+    <Content Include="Layouts\SP.edu.sg\js\alldependencies_2.js" />
+    <Content Include="Layouts\SP.edu.sg\js\context_ns6.js" />
+    <Content Include="Layouts\SP.edu.sg\js\DND.js" />
+    <Content Include="Layouts\SP.edu.sg\js\js_prn.js" />
+    <Content Include="Layouts\SP.edu.sg\js\menu_service.js" />
+    <Content Include="Layouts\SP.edu.sg\js\spsitemap.js" />
+    <Content Include="Layouts\SP.edu.sg\js\sptheme_spwsMainV2.js" />
+    <Content Include="Layouts\SP.edu.sg\js\sticky.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\dijit\nls\common.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\dijit\nls\loading.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\dojo\custom\AutoRotator.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\dojo\custom\Rotator.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\dojo\custom\SPWS.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\dojo\dojo.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\google-analytics\analytics.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\google-analytics\googleAnalytics.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\googlemetamanager\gtm.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\post-widget\post-widget.css" />
+    <Content Include="Layouts\SP.edu.sg\plugins\post-widget\post-widget.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\post-widget\theme-default.css" />
+    <Content Include="Layouts\SP.edu.sg\plugins\semanticTag\semanticTagService.js" />
+    <Content Include="Layouts\SP.edu.sg\plugins\semanticTag\styles.css" />
+    <Content Include="Layouts\SP.edu.sg\plugins\spcustomdojo\nls\alldependencies_ROOT.js" />
+    <Content Include="Webpart\wpConnectwithSP\Elements.xml" />
+    <Content Include="Webpart\wpConnectwithSP\wpConnectwithSPUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpHomeSlides\Elements.xml" />
+    <Content Include="Webpart\wpHomeSlides\wpHomeSlidesUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpMainNav\Elements.xml" />
+    <Content Include="Webpart\wpMainNav\wpMainNavUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpMaskhead\Elements.xml" />
+    <Content Include="Webpart\wpMaskhead\wpMaskheadUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpPortlet\Elements.xml" />
+    <Content Include="Webpart\wpPortlet\wpPortletUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpQuickLinks\Elements.xml" />
+    <Content Include="Webpart\wpQuickLinks\wpQuickLinksUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpSiteMap\Elements.xml" />
+    <Content Include="Webpart\wpSiteMap\wpSiteMapUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpSocialMedia\Elements.xml" />
+    <Content Include="Webpart\wpSocialMedia\wpSocialMediaUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpSPBuzz\Elements.xml" />
+    <Content Include="Webpart\wpSPBuzz\wpSPBuzzUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpSPIRITMagazine\Elements.xml" />
+    <Content Include="Webpart\wpSPIRITMagazine\wpSPIRITMagazineUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpStudentServiceCentre\Elements.xml" />
+    <Content Include="Webpart\wpStudentServiceCentre\wpStudentServiceCentreUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpTopMenu\Elements.xml" />
+    <Content Include="Webpart\wpTopMenu\wpTopMenuUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpUpcomingEvents\Elements.xml" />
+    <Content Include="Webpart\wpUpcomingEvents\wpUpcomingEventsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpVideoGallery\Elements.xml" />
+    <Content Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>
