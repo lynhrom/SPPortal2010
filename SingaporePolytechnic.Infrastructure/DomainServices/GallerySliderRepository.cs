@@ -16,7 +16,7 @@ namespace SingaporePolytechnic.Infrastructure.DomainServices
         {
             using (app = SPPortalApplication.Factory.OpenNew(siteUrl))
             {
-                var items = app.GallerySliders.Items(CamlQuery.Default).ToList();
+                var items = app.GallerySliders.Items(CamlQuery.Default);
                 return items;
             }
         }
