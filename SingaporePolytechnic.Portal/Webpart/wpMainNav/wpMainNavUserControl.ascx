@@ -6,7 +6,24 @@
 <%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="wpMainNavUserControl.ascx.cs" Inherits="SingaporePolytechnic.Portal.Webpart.wpMainNav.wpMainNavUserControl" %>
 
-<div class="spws_main-nav spws_nav clearfix" id="spws_nav">	
+<div class="spws_main-nav spws_nav clearfix" id="spws_nav">
+    <asp:Repeater runat="server" ID="rptTopNavChild">
+        <HeaderTemplate>
+            <ul class="clearfix">
+        </HeaderTemplate>
+        <ItemTemplate>
+            <li>
+                <a href='<%# (string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(Container.DataItem, "NavLink"))) ? "javascript:void(0);" : DataBinder.Eval(Container.DataItem, "NavLink")) %>'
+                    target='<%# (Convert.ToString(DataBinder.Eval(Container.DataItem, "NavLink")).StartsWith("http") ? "_blank" : "_self") %>'>
+                <%# DataBinder.Eval(Container.DataItem, "Title") %></a>
+                <asp:Repeater runat="server" ID="rptTopNavChild1"></asp:Repeater>
+            </li>
+        </ItemTemplate>
+        <FooterTemplate>
+            </ul>
+        </FooterTemplate>
+    </asp:Repeater>
+
     <ul class="clearfix">
 	    <li>
 		    <a href="/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQz8Q7xMDTz9g10tnVwDjExcTPULsh0VAQHnAqE!/?WCM_GLOBAL_CONTEXT=" class="spws_menu_marker ">About SP</a>

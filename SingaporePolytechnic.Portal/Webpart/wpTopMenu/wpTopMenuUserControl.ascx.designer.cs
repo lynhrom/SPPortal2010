@@ -11,5 +11,23 @@ namespace SingaporePolytechnic.Portal.Webpart.wpTopMenu {
     
     
     public partial class wpTopMenuUserControl {
+        
+        /// <summary>
+        /// rptTopNav control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptTopNav;
+        
+        /// <summary>
+        /// rptTopNavChild control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptTopNavChild;
     }
 }
