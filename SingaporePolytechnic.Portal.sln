@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingaporePolytechnic.Portal", "SingaporePolytechnic.Portal\SingaporePolytechnic.Portal.csproj", "{11FD396E-C12E-4D20-BF89-70B1ECD619CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharepointCommon", "SharepointCommon\SharepointCommon.csproj", "{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingaporePolytechnic.Con", "SingaporePolytechnic.Con\SingaporePolytechnic.Con.csproj", "{79C35D80-4C05-438D-9499-3AEF4199F66E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingaporePolytechnic.Core", "SingaporePolytechnic.Core\SingaporePolytechnic.Core.csproj", "{A4F624C3-B5F9-4A92-B238-174C34D8DA9C}"
@@ -33,6 +35,14 @@ Global
 		{11FD396E-C12E-4D20-BF89-70B1ECD619CD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{11FD396E-C12E-4D20-BF89-70B1ECD619CD}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{11FD396E-C12E-4D20-BF89-70B1ECD619CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{44F28208-8CCB-48E0-BB0F-4EC1AB2C13D8}.Release|x86.ActiveCfg = Release|Any CPU
 		{79C35D80-4C05-438D-9499-3AEF4199F66E}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{79C35D80-4C05-438D-9499-3AEF4199F66E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{79C35D80-4C05-438D-9499-3AEF4199F66E}.Debug|Mixed Platforms.Build.0 = Debug|x86

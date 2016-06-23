@@ -11,43 +11,7 @@
 	ul.stakeholder_nav ul li{ width: 100%; float:left;} 
 </style>
 <![endif]-->
-
-<asp:Repeater runat="server" ID="rptTopNav" OnItemDataBound="rptTopNav_ItemDataBound">
-    <HeaderTemplate>
-        <ul class="stakeholder_nav right clearfix">
-    </HeaderTemplate>
-    <ItemTemplate>
-        <li>
-            <a href='<%# (string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(Container.DataItem, "NavLink"))) ? "javascript:void(0);" : DataBinder.Eval(Container.DataItem, "NavLink")) %>'
-            target='<%# (Convert.ToString(DataBinder.Eval(Container.DataItem, "NavLink")).StartsWith("http") ? "_blank" : "_self") %>'>
-            <span class='arrow'></span>
-            <%# DataBinder.Eval(Container.DataItem, "Title") %></a>
-            <asp:Repeater runat="server" ID="rptTopNavChild1"></asp:Repeater>
-        </li>
-    </ItemTemplate>
-    <FooterTemplate>
-        </ul>
-    </FooterTemplate>
-</asp:Repeater>
-
-<asp:Repeater runat="server" ID="rptTopNavChild">
-    <HeaderTemplate>
-        <ul>
-    </HeaderTemplate>
-    <ItemTemplate>
-        <li>
-            <a href='<%# (string.IsNullOrEmpty(Convert.ToString(DataBinder.Eval(Container.DataItem, "NavLink"))) ? "javascript:void(0);" : DataBinder.Eval(Container.DataItem, "NavLink")) %>'
-                target='<%# (Convert.ToString(DataBinder.Eval(Container.DataItem, "NavLink")).StartsWith("http") ? "_blank" : "_self") %>'>
-            <%# DataBinder.Eval(Container.DataItem, "Title") %></a>
-            <asp:Repeater runat="server" ID="rptTopNavChild1"></asp:Repeater>
-        </li>
-    </ItemTemplate>
-    <FooterTemplate>
-        </ul>
-    </FooterTemplate>
-</asp:Repeater>
-
-<%--<ul class="stakeholder_nav right clearfix">
+<ul class="stakeholder_nav right clearfix">
 	<li>
 		<a href='/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQz8Q7xMDTz9g10tnVwDjExMjfULsh0VAYPfRD0!/?WCM_GLOBAL_CONTEXT='><span class='arrow'></span>Parents</a>
 		<ul>
@@ -208,7 +172,7 @@
 			<li><a href='/wps/portal/vp-spws/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOJDPUxdjdxMTQz8TS0sDDz9LbxNLELCjCzcDfULsh0VAcMoZi4!/?WCM_GLOBAL_CONTEXT='>Help for Media</a></li>
 		</ul>
 	</li>
-</ul>--%>
+</ul>
 <script>
 	$(".stakeholder_nav").gjMenuExt({
 		delay: 1000
