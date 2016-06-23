@@ -8,15 +8,15 @@ using SingaporePolytechnic.Core.Model;
 
 namespace SingaporePolytechnic.Infrastructure.DomainServices
 {
-    public class GallerySliderRepository : IRepositoryBase<GallerySlider>
+    public class CalendarRepository : IRepositoryBase<UpcomingEvent>
     {
         private SPPortalApplication app = null;
 
-        public IEnumerable<GallerySlider> GetItems(string siteUrl)
+        public IEnumerable<UpcomingEvent> GetItems(string siteUrl)
         {
             using (app = SPPortalApplication.Factory.OpenNew(siteUrl))
             {
-                var items = app.GallerySliders.Items(CamlQuery.Default);
+                var items = app.UpcomingEvents.Items(CamlQuery.Default);
                 return items;
             }
         }

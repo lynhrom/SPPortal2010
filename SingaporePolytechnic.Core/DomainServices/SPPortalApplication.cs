@@ -8,5 +8,8 @@ namespace SingaporePolytechnic.Core.DomainServices
     {
         [List(Url = Constants.GallerySlider.Name)]
         public virtual IQueryList<GallerySlider> GallerySliders { get; set; }
+
+        [List(Url = Constants.LISTS + Constants.SEPRATE + Constants.UpcomingEvents.Name)]
+        public virtual IQueryList<UpcomingEvent> UpcomingEvents { get; set; }
     }
 }

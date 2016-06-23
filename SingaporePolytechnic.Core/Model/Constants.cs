@@ -2,6 +2,9 @@
 {
     public class Constants
     {
+        public const string LISTS = "lists";
+        public const string SEPRATE = "/";
+
         #region Nested type: GallerySlider
 
         public class GallerySlider
@@ -21,5 +24,11 @@
         }
 
         #endregion
+
+        public class UpcomingEvents
+        {
+            public const string Name = "UpcomingEvents";
+
+        }
     }
 }

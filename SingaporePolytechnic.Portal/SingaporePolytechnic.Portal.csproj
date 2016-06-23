@@ -186,6 +186,7 @@
     <None Include="Layouts\SP.edu.sg\SPPortal.master" />
     <None Include="ListTemplates\GallerySlider.stp" />
     <None Include="ListTemplates\Navigation.stp" />
+    <None Include="ListTemplates\UpcomingEvents.stp" />
     <None Include="Package\Package.package">
       <PackageId>{9bf733fd-20b1-4185-bc27-ba465c4a279c}</PackageId>
     </None>
