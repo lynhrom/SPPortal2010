@@ -59,7 +59,7 @@
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\UpcomingEvent.cs" />
     <Compile Include="Model\GallerySlider.cs" />
-    <Compile Include="Model\ImageSize.cs" />
+    <Compile Include="Model\VideoGallery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

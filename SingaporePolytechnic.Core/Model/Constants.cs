@@ -30,5 +30,10 @@
             public const string Name = "UpcomingEvents";
 
         }
+
+        public class VideoGallery
+        {
+            public const string Name = "VideoGallery";
+        }
     }
 }

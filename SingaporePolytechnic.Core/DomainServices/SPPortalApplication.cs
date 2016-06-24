@@ -11,5 +11,8 @@ namespace SingaporePolytechnic.Core.DomainServices
 
         [List(Url = Constants.LISTS + Constants.SEPRATE + Constants.UpcomingEvents.Name)]
         public virtual IQueryList<UpcomingEvent> UpcomingEvents { get; set; }
+
+        [List(Url = Constants.LISTS + Constants.SEPRATE + Constants.VideoGallery.Name)]
+        public virtual IQueryList<VideoGallery> VideoGallerys { get; set; }
     }
 }

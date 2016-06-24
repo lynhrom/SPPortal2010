@@ -11,5 +11,14 @@ namespace SingaporePolytechnic.Portal.Webpart.wpVideoGallery {
     
     
     public partial class wpVideoGalleryUserControl {
+        
+        /// <summary>
+        /// ltrVideoGallery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrVideoGallery;
     }
 }
