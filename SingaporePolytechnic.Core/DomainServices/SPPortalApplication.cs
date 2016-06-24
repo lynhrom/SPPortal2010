@@ -17,5 +17,8 @@ namespace SingaporePolytechnic.Core.DomainServices
 
         [List(Url = Constants.LISTS + Constants.SEPRATE + Constants.Magazine.Name)]
         public virtual IQueryList<Magazine> Magazine { get; set; }
+
+        [List(Url = Constants.Pages.Name)]
+        public virtual IQueryList<Page> WhySPPages { get; set; }
     }
 }

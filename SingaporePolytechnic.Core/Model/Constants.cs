@@ -28,7 +28,6 @@
         public class UpcomingEvents
         {
             public const string Name = "UpcomingEvents";
-
         }
 
         public class VideoGallery
@@ -39,6 +38,16 @@
         public class Magazine
         {
             public const string Name = "Magazine";
+        }
+
+        public class Pages
+        {
+            public const string Name = "Pages";
+        }
+
+        public class SubSites
+        {
+            public const string FutureStudents = "Future Students";
         }
     }
 }

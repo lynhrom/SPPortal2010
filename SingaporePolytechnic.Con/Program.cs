@@ -16,7 +16,7 @@ namespace SingaporePolytechnic.Con
     {
         static void Main(string[] args)
         {
-            var items = new CalendarRepository().GetItems("http://spportal.edu.sg");
+            var items = new WhySPRepository().GetItems("http://spportal.edu.sg/Future Students/");
             //using (var app = SPPortalApplication.Factory.OpenNew("http://spportal.edu.sg"))
             //{
             //    var items = app.UpcomingEvents.GetFields(false);

@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
@@ -174,6 +175,14 @@
     <Compile Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx.designer.cs">
       <DependentUpon>wpVideoGalleryUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Webpart\wpVideoShowcase\wpVideoShowcase.cs" />
+    <Compile Include="Webpart\wpVideoShowcase\wpVideoShowcaseUserControl.ascx.cs">
+      <DependentUpon>wpVideoShowcaseUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpVideoShowcase\wpVideoShowcaseUserControl.ascx.designer.cs">
+      <DependentUpon>wpVideoShowcaseUserControl.ascx.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Feature1\Feature1.feature">
@@ -252,6 +261,10 @@
       <SharePointProjectItemId>{f80c3ac1-b179-49ed-a8dc-a4e7c2175e2d}</SharePointProjectItemId>
     </None>
     <None Include="Webpart\wpVideoGallery\wpVideoGallery.webpart" />
+    <None Include="Webpart\wpVideoShowcase\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c55c69f6-5180-4ac0-82d3-bdc1f7d8942e}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpVideoShowcase\wpVideoShowcase.webpart" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SingaporePolytechnic.Core\SingaporePolytechnic.Core.csproj">
@@ -388,6 +401,10 @@
     </Content>
     <Content Include="Webpart\wpVideoGallery\Elements.xml" />
     <Content Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpVideoShowcase\Elements.xml" />
+    <Content Include="Webpart\wpVideoShowcase\wpVideoShowcaseUserControl.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
   </ItemGroup>
