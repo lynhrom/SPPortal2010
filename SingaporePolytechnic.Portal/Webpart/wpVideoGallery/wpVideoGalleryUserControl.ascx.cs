@@ -23,9 +23,9 @@ namespace SingaporePolytechnic.Portal.Webpart.wpVideoGallery
         private void RenderVideoGallery()
         {
 
-            var currentItem = new VideoGalleryRepository().GetItems(SPContext.Current.Web.Url).FirstOrDefault();
-            if (currentItem != null)
-            {
+            var latestItem = new VideoGalleryRepository().GetItems(SPContext.Current.Web.Url).FirstOrDefault();
+            if (latestItem != null)
+            { 
                 // BuildMyString.com generated code. Please enjoy your string responsibly.
                 var builder = new StringBuilder(); 
 
@@ -44,8 +44,8 @@ namespace SingaporePolytechnic.Portal.Webpart.wpVideoGallery
                 builder.Append("			<div class=\"wpsPortletBody\" style=\"margin:15px 0px 0px 0px\">");
                 builder.Append("				<h4>Video Gallery</h4>");
                 builder.Append("				<div class=\"lpg-video matchHeight\">");
-                builder.Append(string.Format("					<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"175\" src=\"{0}\" width=\"310\"></iframe>", currentItem.VideoUrl));
-                builder.Append(string.Format("					<div class=\"desc\">{0}</div>", currentItem.Title));
+                builder.Append(string.Format("					<iframe allowfullscreen=\"\" frameborder=\"0\" height=\"175\" src=\"{0}\" width=\"310\"></iframe>", latestItem.VideoUrl));
+                builder.Append(string.Format("					<div class=\"desc\">{0}</div>", latestItem.Title));
                 builder.Append("					<div class=\"link\"><a target=\"\" title=\"\" href=\"/wps/portal/vp-spws/spws.videoshowcase\" >More Videos</a></div>");
                 builder.Append("				</div>");
                 builder.Append("			</div>");
