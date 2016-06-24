@@ -35,5 +35,10 @@
         {
             public const string Name = "VideoGallery";
         }
+
+        public class Magazine
+        {
+            public const string Name = "Magazine";
+        }
     }
 }

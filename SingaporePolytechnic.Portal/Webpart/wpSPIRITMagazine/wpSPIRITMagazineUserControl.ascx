@@ -4,6 +4,10 @@
 <%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Register Tagprefix="asp" Namespace="System.Web.UI" Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
 <%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+
+<%@ Assembly Name="SharepointCommon, Version=2.2.0.0, Culture=neutral, PublicKeyToken=627269ce210281c3" %> 
+<%@ Assembly Name="SingaporePolytechnic.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b02968f98e12fb6f" %> 
+
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="wpSPIRITMagazineUserControl.ascx.cs" Inherits="SingaporePolytechnic.Portal.Webpart.wpSPIRITMagazine.wpSPIRITMagazineUserControl" %>
 
 <table class="layoutColumn" cellpadding="0" cellspacing="0">
@@ -20,9 +24,9 @@
 				<div id="topRight_icons"></div>
 				<h4>SPIRIT Magazine</h4>
 				<div class="lpg-box matchHeight">
-					<a href='https://spirit.sp.edu.sg/article/emceeing-for-the-singapore-forum/' target='_blank'><img src='/_layouts/SP.edu.sg/images/spirit.jpg?MOD=AJPERES' alt='Spirit Magazine'/></a>
-					<div class='title'><a href='https://spirit.sp.edu.sg/article/emceeing-for-the-singapore-forum/' target='_blank'>Emceeing for the Singapore Forum 2016</a></div>
-					<div class='desc'>SP recent graduate Laura Lau recently emceed at the Singapore Forum 2016 for ministers and world leaders. Hear more about her experiences.</div>
+					<a href='<% =Item.Link %>' target='_blank'><img src='<% =AttachmentLink %>' alt='Spirit Magazine'/></a>
+					<div class='title'><a href='<% =Item.Link %>' target='_blank'><% =Item.Title %></a></div>
+					<div class='desc'><% =Item.Sumary %></div>
 				</div>
 			</div>
 		</td>

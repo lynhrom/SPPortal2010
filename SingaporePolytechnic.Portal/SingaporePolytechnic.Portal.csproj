@@ -201,7 +201,9 @@
     <None Include="Webpart\wpHomeSlides\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{911cec1d-75f6-4c80-ac78-299593e7eae5}</SharePointProjectItemId>
     </None>
-    <None Include="Webpart\wpHomeSlides\wpHomeSlides.webpart" />
+    <None Include="Webpart\wpHomeSlides\wpHomeSlides.webpart">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Webpart\wpMainNav\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d3160b47-0ac5-4f2a-919e-bc6c58c20824}</SharePointProjectItemId>
     </None>
@@ -341,17 +343,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Webpart\wpHomeSlides\Elements.xml" />
-    <Content Include="Webpart\wpHomeSlides\wpHomeSlidesUserControl.ascx">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
+    <Content Include="Webpart\wpHomeSlides\wpHomeSlidesUserControl.ascx" />
     <Content Include="Webpart\wpMainNav\Elements.xml" />
     <Content Include="Webpart\wpMainNav\wpMainNavUserControl.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
     <Content Include="Webpart\wpMaskhead\Elements.xml" />
-    <Content Include="Webpart\wpMaskhead\wpMaskheadUserControl.ascx">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
+    <Content Include="Webpart\wpMaskhead\wpMaskheadUserControl.ascx" />
     <Content Include="Webpart\wpPortlet\Elements.xml" />
     <Content Include="Webpart\wpPortlet\wpPortletUserControl.ascx">
       <SubType>ASPXCodeBehind</SubType>

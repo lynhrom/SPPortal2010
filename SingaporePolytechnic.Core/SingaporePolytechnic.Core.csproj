@@ -57,6 +57,7 @@
     <Compile Include="DomainServices\IRepositoryBase.cs" />
     <Compile Include="DomainServices\SPPortalApplication.cs" />
     <Compile Include="Model\Constants.cs" />
+    <Compile Include="Model\Magazine.cs" />
     <Compile Include="Model\UpcomingEvent.cs" />
     <Compile Include="Model\GallerySlider.cs" />
     <Compile Include="Model\VideoGallery.cs" />
