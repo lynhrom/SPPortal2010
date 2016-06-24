@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
@@ -58,6 +59,13 @@
     <Compile Include="App\NavigationApp.cs" />
     <Compile Include="App\SPPortalApp.cs" />
     <Compile Include="Entity\NavigationEntity.cs" />
+    <Compile Include="ISAPI\SingaporePolytechnic.Service\SocialMediaService.svc.cs">
+      <DependentUpon>SocialMediaService.svc</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISAPI\SingaporePolytechnic.Service\SocialMediaService.svc.designer.cs">
+      <DependentUpon>SocialMediaService.svc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Webpart\BaseSPPortalUC.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -179,6 +187,9 @@
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{abe16aab-a28e-49ad-bd09-3f0265ef0509}</FeatureId>
     </None>
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9fa67f90-8561-46e2-859c-2d28732b2fe2}</SharePointProjectItemId>
+    </None>
     <None Include="key.snk" />
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{49526c85-90da-4dd7-848e-dbd3b76f4190}</SharePointProjectItemId>
@@ -265,6 +276,7 @@
     <Content Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
+    <Content Include="ISAPI\SingaporePolytechnic.Service\SocialMediaService.svc" />
     <Content Include="Layouts\SP.edu.sg\css\Portal.ico" />
     <Content Include="Layouts\SP.edu.sg\css\style.css" />
     <Content Include="Layouts\SP.edu.sg\feed\spbuzzfeedxml\feed.xml" />

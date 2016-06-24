@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dlls", "dlls", "{3BE62958-3
 		Dlls\SharepointCommon.XML = Dlls\SharepointCommon.XML
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingaporePolytechnic.Service", "SingaporePolytechnic.Service\SingaporePolytechnic.Service.csproj", "{0B682DD8-EF29-4D9B-9096-6DB5068315A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,16 @@ Global
 		{1A3153F2-7123-4ACB-BD04-5B7A41F8D84D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1A3153F2-7123-4ACB-BD04-5B7A41F8D84D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{1A3153F2-7123-4ACB-BD04-5B7A41F8D84D}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0B682DD8-EF29-4D9B-9096-6DB5068315A3}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
