@@ -10,11 +10,10 @@ namespace SingaporePolytechnic.Infrastructure.DomainServices
 {
     public class CalendarRepository : IRepositoryBase<UpcomingEvent>
     {
-        private SPPortalApplication app = null;
 
         public IEnumerable<UpcomingEvent> GetItems(string siteUrl)
         {
-            using (app = SPPortalApplication.Factory.OpenNew(siteUrl))
+            using (var app = SPPortalApplication.Factory.OpenNew(siteUrl))
             {
                 var items = app.UpcomingEvents.Items(CamlQuery.Default);
                 return items;

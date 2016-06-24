@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainServices\CalendarRepository.cs" />
+    <Compile Include="DomainServices\WhySPRepository.cs" />
     <Compile Include="DomainServices\GallerySliderRepository.cs" />
     <Compile Include="DomainServices\VideoGalleryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,11 +10,9 @@ namespace SingaporePolytechnic.Infrastructure.DomainServices
 {
     public class GallerySliderRepository : IRepositoryBase<GallerySlider>
     {
-        private SPPortalApplication app = null;
-
         public IEnumerable<GallerySlider> GetItems(string siteUrl)
         {
-            using (app = SPPortalApplication.Factory.OpenNew(siteUrl))
+            using (var app = SPPortalApplication.Factory.OpenNew(siteUrl))
             {
                 var items = app.GallerySliders.Items(CamlQuery.Default);
                 return items;

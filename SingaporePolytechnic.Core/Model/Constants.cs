@@ -35,5 +35,16 @@
         {
             public const string Name = "VideoGallery";
         }
+
+        public class Pages
+        {
+            public const string Name = "Pages";
+        }
+
+        public class SubSites
+        {
+            public const string FutureStudents = "Future Students";
+           
+        }
     }
 }

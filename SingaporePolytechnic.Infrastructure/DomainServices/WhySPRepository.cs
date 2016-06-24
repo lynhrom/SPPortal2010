@@ -8,13 +8,13 @@ using SingaporePolytechnic.Core.Model;
 
 namespace SingaporePolytechnic.Infrastructure.DomainServices
 {
-    public class VideoGalleryRepository : IRepositoryBase<VideoGallery>
+    public class WhySPRepository : IRepositoryBase<Page>
     {
-        public IEnumerable<VideoGallery> GetItems(string siteUrl)
+        public IEnumerable<Page> GetItems(string siteUrl)
         {
             using (var app = SPPortalApplication.Factory.OpenNew(siteUrl))
             {
-                var items = app.VideoGallerys.Items(CamlQuery.Default);
+                var items = app.WhySPPages.Items(CamlQuery.Default);
                 return items;
             }
         }

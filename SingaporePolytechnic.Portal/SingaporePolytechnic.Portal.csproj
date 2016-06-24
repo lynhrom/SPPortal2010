@@ -59,13 +59,6 @@
     <Compile Include="App\NavigationApp.cs" />
     <Compile Include="App\SPPortalApp.cs" />
     <Compile Include="Entity\NavigationEntity.cs" />
-    <Compile Include="ISAPI\SingaporePolytechnic.Service\SocialMediaService.svc.cs">
-      <DependentUpon>SocialMediaService.svc</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ISAPI\SingaporePolytechnic.Service\SocialMediaService.svc.designer.cs">
-      <DependentUpon>SocialMediaService.svc.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Webpart\BaseSPPortalUC.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -182,13 +175,18 @@
     <Compile Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx.designer.cs">
       <DependentUpon>wpVideoGalleryUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Webpart\wpVideoShowcase\wpVideoShowcase.cs" />
+    <Compile Include="Webpart\wpVideoShowcase\wpVideoShowcaseUserControl.ascx.cs">
+      <DependentUpon>wpVideoShowcaseUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webpart\wpVideoShowcase\wpVideoShowcaseUserControl.ascx.designer.cs">
+      <DependentUpon>wpVideoShowcaseUserControl.ascx.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{abe16aab-a28e-49ad-bd09-3f0265ef0509}</FeatureId>
-    </None>
-    <None Include="ISAPI\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{9fa67f90-8561-46e2-859c-2d28732b2fe2}</SharePointProjectItemId>
     </None>
     <None Include="key.snk" />
     <None Include="Layouts\SharePointProjectItem.spdata">
@@ -261,6 +259,10 @@
       <SharePointProjectItemId>{f80c3ac1-b179-49ed-a8dc-a4e7c2175e2d}</SharePointProjectItemId>
     </None>
     <None Include="Webpart\wpVideoGallery\wpVideoGallery.webpart" />
+    <None Include="Webpart\wpVideoShowcase\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c55c69f6-5180-4ac0-82d3-bdc1f7d8942e}</SharePointProjectItemId>
+    </None>
+    <None Include="Webpart\wpVideoShowcase\wpVideoShowcase.webpart" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SingaporePolytechnic.Core\SingaporePolytechnic.Core.csproj">
@@ -276,7 +278,6 @@
     <Content Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
-    <Content Include="ISAPI\SingaporePolytechnic.Service\SocialMediaService.svc" />
     <Content Include="Layouts\SP.edu.sg\css\Portal.ico" />
     <Content Include="Layouts\SP.edu.sg\css\style.css" />
     <Content Include="Layouts\SP.edu.sg\feed\spbuzzfeedxml\feed.xml" />
@@ -402,6 +403,10 @@
     </Content>
     <Content Include="Webpart\wpVideoGallery\Elements.xml" />
     <Content Include="Webpart\wpVideoGallery\wpVideoGalleryUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Webpart\wpVideoShowcase\Elements.xml" />
+    <Content Include="Webpart\wpVideoShowcase\wpVideoShowcaseUserControl.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
   </ItemGroup>

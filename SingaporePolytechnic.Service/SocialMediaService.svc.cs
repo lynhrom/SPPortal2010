@@ -10,7 +10,6 @@ using System.Text;
 namespace SingaporePolytechnic.Service
 {
 
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class SocialMediaService : ISocialMediaService
     {
         public string GetData(int value)
